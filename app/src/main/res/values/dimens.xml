@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<dimen name="titleTxtSize">32dp</dimen>
+    <dimen name="genreItemTxtSize">24dp</dimen>
+    <dimen name="genreItemHeight">70dp</dimen>
+    <dimen name="genreItemBorderVerticalMargin">10dp</dimen>
+</resources>
