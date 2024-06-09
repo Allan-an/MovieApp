@@ -6,10 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.movielistingapp.R
 import com.example.movielistingapp.adapter.MoviesAdapter
 import com.example.movielistingapp.databinding.FragmentMovieListBinding
 import com.example.movielistingapp.model.Genre
+import com.example.movielistingapp.ui.MainActivity
 
 class MovieListFragment : Fragment() {
     private var selectedGenre: Genre? = null
@@ -24,9 +24,10 @@ class MovieListFragment : Fragment() {
         // Inflate the layout for this fragment
        layoutBinding = FragmentMovieListBinding.inflate(inflater,container,false)
        val moviesList = selectedGenre?.moviesList
-       if(moviesList!=null)
-       adapter = MoviesAdapter(context = requireContext(),moviesList = moviesList){movie->
-
+       if (moviesList != null) {
+           adapter = MoviesAdapter(context = requireContext(), moviesList = moviesList) { movie ->
+               (activity as MainActivity).navigateToMovieDetailsScreen(movie)
+           }
        }
        layoutBinding.moviesListRecyclerview.layoutManager = GridLayoutManager(requireContext(),2)
        layoutBinding.moviesListRecyclerview.adapter = adapter

@@ -29,6 +29,7 @@ retrofit = {group = "com.squareup.retrofit2",name = "retrofit",version.ref="retr
 gson = {group = "com.squareup.retrofit2",name = "converter-gson",version.ref="gson"}
 live-data = {group = "androidx.lifecycle",name = "lifecycle-livedata-ktx",version.ref="live-data"}
 viewmodel = {group = "androidx.lifecycle",name = "lifecycle-viewmodel-ktx",version.ref="viewmodel"}
+activity-ktx = { group = "androidx.activity", name = "activity-ktx", version.ref = "activity" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
